@@ -2,7 +2,7 @@ FROM nginx:latest
 
 COPY index.html /usr/share/nginx/html
 
-COPY linxu.png /usr/share/nginx/html
+COPY download.jpeg /usr/share/nginx/html
 
 EXPOSE 80 443
 
