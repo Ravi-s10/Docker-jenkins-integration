@@ -49,14 +49,19 @@ pipeline{
         }
         
         
-        stage("Cleaning up"){
+        //stage("Cleaning up"){
+        //    steps{
+            //    sh "docker rmi $registry/$BUILD_NUMBER"
+       //     }
+       // }
+        
+        
+        stage("Deployig app to localhost"){
+         
             steps{
-                sh "docker rmi $registry/$BUILD_NUMBER"
+             sh "docker run -d -p 80:80  dockerImage"
             }
         }
-        
-        
-        
         
         
         
