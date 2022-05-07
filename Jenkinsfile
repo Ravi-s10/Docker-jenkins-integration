@@ -59,7 +59,7 @@ pipeline{
         stage("Deployig app to localhost"){
          
             steps{
-             sh "docker run -d -p 85:80  $registry/$BUILD_NUMBER"
+             sh "docker run -d -p 85:80  $registry/$BUILD_NUMBER-webapp"
             }
         }
         
