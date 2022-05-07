@@ -59,7 +59,7 @@ pipeline{
         stage("Deployig app to localhost"){
          
             steps{
-             sh "docker run -d -p 80:80  dockerImage"
+             sh "docker run -d -p 80:80  docker.build registry + "/$BUILD_NUMBER""
             }
         }
         
